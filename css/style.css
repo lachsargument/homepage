@@ -1,0 +1,88 @@
+/* fonts */
+@font-face {
+    font-family: inkscreen;
+    font-weight: normal;
+    src: url(/fonts/inkscreen.r.ttf);
+}
+@font-face {
+    font-family: inkscreen;
+    font-weight: bold;
+    src: url(/fonts/inkscreen.b.ttf);
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url(/fonts/ebgaramond.ttf);
+}
+
+/* color tokens */
+:root {
+    --root-bg-color: #c7d6e5;
+    --bg-color: #d8e3ed;
+    --text-color: #444f5d;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --root-bg-color: #191d22;
+        --bg-color: #242931;
+        --text-color: #e9f0f5;
+    }
+}
+
+/* base elements */
+/* Each color is declared twice on purpose: the hex line is a fallback
+   for old browsers without CSS variables (e.g. Safari on Leopard). */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #c7d6e5;
+    background-color: var(--root-bg-color);
+    color: #444f5d;
+    color: var(--text-color);
+    font-family: inkscreen, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: EBGaramond, serif;
+    font-size: 48px;
+    margin: 0;
+    user-select: none;
+}
+
+p {
+    margin: 5px;
+}
+
+a {
+    color: #444f5d;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: #444f5d;
+    background-color: var(--text-color);
+    color: #d8e3ed;
+    color: var(--bg-color);
+}
+
+/* components */
+.logo {
+    height: 64px;
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Ink</title>
+    <meta name="theme-color" content="#d8e3ed"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#242931"
+          media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script defer src="/scripts/favicon.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="https://cloud.umami.is/script.js"
+            data-website-id="beed51c3-137a-47db-84ec-b76dcbd05158"></script>
+</head>
+<body>
+    <header> 
+        <h1>
+            Caffeine Ink
+            <picture>
+                <source srcset="/images/logo-dark.png"
+                        media="(prefers-color-scheme: dark)">
+                <img src="/images/logo.png" class="logo">
+            </picture>
+        </h1>
+    </header>
+    <p>The site has been online for
+        <span id="days"></span> days,
+        <span id="time"></span>.
+    </p>
+    <p>
+        <a href="https://x.com/lachsargument"
+           target="_blank" rel="noopener noreferrer">
+            Twitter</a>
+        <a href="https://github.com/lachsargument"
+           target="_blank" rel="noopener noreferrer">
+            GitHub</a>
+    </p>
+    <!-- Loaded at the end rather than with defer so the #days and #time
+         spans exist on first run, even in old browsers without defer. -->
+    <script src="/scripts/timer.js"></script>
+</body>
+</html>
